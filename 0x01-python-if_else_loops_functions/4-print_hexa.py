@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-for num in range(0,99):
-    print("{} = {}".format(num, hex(num)), end = '')
+for character in range(97, 123):
+    if character != 101 and character != 113:
+        print("{:c}".format(character), end='')
