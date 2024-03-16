@@ -4,8 +4,8 @@ from sys import argv
 
 def main():
 
-    arg_len = len(argv[1:])
-    args = argv[1:]
+    arg_len = len(argv) - 1
+
     if arg_len == 0:
         print("0 arguments.")
     elif arg_len == 1:
@@ -13,7 +13,7 @@ def main():
     else:
         print("{} arguments:".format(arg_len))
         for i, arg in enumerate(args, 1):
-            print("{}: {}".format(i, arg))
+            print("{}: {}".format(i + 1, argv[i + 1]))
 
 
 if __name__ == "__main__":
