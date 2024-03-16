@@ -12,7 +12,7 @@ def main():
         print("1 argument:")
     else:
         print("{} arguments:".format(arg_len))
-        for i, arg in enumerate(args, 1):
+        for i in range(arg_len):
             print("{}: {}".format(i + 1, argv[i + 1]))
 
 
