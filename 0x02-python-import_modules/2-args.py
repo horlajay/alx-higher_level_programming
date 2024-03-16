@@ -2,7 +2,7 @@
 from sys import argv
 
 
-def main():
+if __name__ == "__main__":
 
     arg_len = len(argv) - 1
 
@@ -14,7 +14,3 @@ def main():
         print("{} arguments:".format(arg_len))
         for i in range(arg_len):
             print("{}: {}".format(i + 1, argv[i + 1]))
-
-
-if __name__ == "__main__":
-    main()
