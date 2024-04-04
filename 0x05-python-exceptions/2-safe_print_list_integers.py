@@ -1,16 +1,15 @@
 #!/usr/bin/python3
+
 def safe_print_list_integers(my_list=[], x=0):
-    count = 0
-    try:
-        for index in my_list[:x]:
-            try:
-                integer_v = int(index)
-                print("{}".format(integer_v))
-                count += 1
-            except ValueError:
-                pass
-    except TypeError:
-        print(" The value x is greater than the list")
-        return 0
-    print()
-    return count
+    """
+    prints the first x elements of a list and only integers.
+    """
+    ret = 0
+    for i in range(0, x):
+        try:
+            print("{:d}".format(my_list[i]), end="")
+            ret += 1
+        except (ValueError, TypeError):
+            continue
+    print("")
+    return (ret)
